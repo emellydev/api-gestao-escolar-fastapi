@@ -1,0 +1,14 @@
+services:
+  api:
+    # Builds the image from the Dockerfile in the current directory (.)
+    build: .
+    container_name: api
+    # Maps port 8000 of your computer (host) to port 8000 of the container
+    ports:
+      - "8000:8000"
+      
+    # Mounts the current project directory to /app inside the container
+    volumes:
+      - .:/app
+
+  
